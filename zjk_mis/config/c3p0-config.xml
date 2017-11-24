@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<c3p0-config>
+
+  <named-config name="loginpnfy"> 
+  
+  	<property name="user">root</property>
+    <property name="password">123</property>
+    <property name="jdbcUrl">jdbc:mysql://192.168.102.12/w-mis</property>
+    <property name="driverClass">com.mysql.jdbc.Driver</property>
+  
+    <property name="acquireIncrement">2</property>
+    <property name="initialPoolSize">50</property>
+    <property name="minPoolSize">20</property>
+    <property name="maxPoolSize">100</property>
+
+    <property name="maxStatements">100</property> 
+    <property name="maxStatementsPerConnection">100</property>
+
+  </named-config>
+</c3p0-config>
+

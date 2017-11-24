@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+             "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="jdbc.batch_size">20</property>
+		<property name="connection.autocommit">true</property>
+
+		<!-- 显示sql语句 -->
+		<property name="show_sql">true</property>
+		<property name="connection.useUnicode">true</property>
+		<property name="connection.characterEncoding">UTF-8</property>
+
+		<!-- 缓存设置 -->
+		<property name="cache.provider_configuration_file_resource_path">/ehcache.xml</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		<property name="cache.use_query_cache">true</property>
+
+		<mapping resource="com/jinmayi/entity/Admin.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Employee.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Enterprise.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Circulate.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Product.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Qrcode.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Productproperty.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Logininformation.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Waybill.hbm.xml" />
+		<mapping resource="com/jinmayi/entity/Qrcodeproperty.hbm.xml" />
+		
+		<mapping resource="com/jinmayi/entity/CoiCategoryOne.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/CoiCategoryThree.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/CoiCategoryTwo.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/Statistical.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/Scaninformation.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/Repertory.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/Evaluate.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/Makeqrcode.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/Packageinformation.hbm.xml"/>
+		<mapping resource="com/jinmayi/entity/Sellinformation.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>  

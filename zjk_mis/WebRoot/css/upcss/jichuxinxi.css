@@ -1,0 +1,25 @@
+.text_2{
+	margin-left:30px;
+}
+.text_3{
+	margin-left:160px;
+}
+.text_4{
+	margin-left:20px;
+}
+.jianju{
+	width:760px;
+}
+.jianju8{
+	margin-left:1px;
+}
+#ji_chu_xin_xi_btn{
+	border-radius:10px;
+	background-color: #82C053;
+	width:75px;
+	height:35px;
+	color:white;
+	border:hidden;
+	font-size:14px;
+	margin-left:-5px;
+}

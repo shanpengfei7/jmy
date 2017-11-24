@@ -1,0 +1,59 @@
+
+  *{margin:0;padding:0}
+  body {
+  font-size: 10px;
+  font-family: "Microsoft YaHei",serif;
+  }
+  .layui-form {
+  overflow: hidden;
+  width: 270px;
+  margin: 0 auto;
+  }
+  .layui-form-center{text-align:center}
+  .layui-form-item{
+  margin-bottom: 15px;
+  height: 25px;
+  line-height: 29px;}
+  .layui-form-item label {
+  font-size: 14px;
+    color: #333;
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+ 
+  }
+  .layui-form-item.sum{margin-bottom:60px}
+  .layui-input-inline {
+  display: inline-block;
+  margin-left:5px;
+  }
+  .layui-form-item input{
+    float:right;
+    border:none;
+  border-bottom:1px solid #666;
+  display:inline-block;
+  width:185px;
+  height: 25px;
+  margin-bottom: -4px;
+  outline:none;
+  }
+  .layui-form-top{font-weight:bold;font-size:16px;}
+  .layui-form-right {
+  width: 185px;
+  display: inline-block;
+  text-align: left;
+  margin-left: 10px;
+  }
+  .layui-form-item.last-item {
+    margin-bottom: 60px;
+}
+  .bottom{    position: fixed;
+      margin-bottom: 0px;
+  bottom: 0;
+  height: 35px;
+  left: 0;
+  width: 100%;
+  text-align:center;font-weight:bold;font-size:14px;}
+  .bottom>div{text-align:center}
+  .layui-btn{width:235px;height:30px;font-size:16px;font-weight:bold;background-color:#066fdb;border:none;color:#fff;
+  border-radius:20px;}

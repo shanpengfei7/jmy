@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Users\pengfei\.m2\repository\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" />
+	<context id="context1">
+		<jdbcConnection connectionURL="jdbc:mysql://192.168.102.15/cj"
+			driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
+		<javaModelGenerator targetPackage="com.jmy.entity"
+			targetProject="cj Maven Webapp/src/main/java" />
+		<sqlMapGenerator targetPackage="com.jmy.mapping"
+			targetProject="cj Maven Webapp/src/main/java" />
+		<javaClientGenerator targetPackage="com.jmy.dao"
+			targetProject="cj Maven Webapp/src/main/java" type="XMLMAPPER" />
+		<table tableName="admin" domainObjectName="Admi">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="update_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="app_notice" domainObjectName="AppNotice">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="update_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="send_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="app_read" domainObjectName="AppRead">
+			<columnOverride column="read_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="enterprise" domainObjectName="Enterprise">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="update_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="login_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="time_notice" domainObjectName="TimeNotice">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="update_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="page_notice" domainObjectName="PageNotice">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="update_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="start_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="end_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="page_read" domainObjectName="PageRead">
+			<columnOverride column="read_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="phone_notice" domainObjectName="PhoneNotice">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="update_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="phone_send" domainObjectName="PhoneSend"></table>
+		<table tableName="swjg" domainObjectName="Swjg"></table>
+		<table tableName="tax" domainObjectName="Tax">
+			<columnOverride column="add_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="yingys" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="qysds" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="grsds" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="zys" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="yjs" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="fcs" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="yhs" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="tdsys" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="tdzzs" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="ccs" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="yanys" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="gdzys" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="qs" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="zzs" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="total" javaType="BigDecimal"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="pre_time" domainObjectName="PreTime">
+			<columnOverride column="last_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+			<columnOverride column="now_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="notice" domainObjectName="Notice">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="noticeread" domainObjectName="NoticeRead">
+			<columnOverride column="create_time" javaType="Long"
+				jdbcType="" typeHandler="" delimitedColumnName="" />
+		</table>
+		<table tableName="app" domainObjectName="App">
+		</table>
+	</context>
+</generatorConfiguration>

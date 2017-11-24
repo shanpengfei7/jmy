@@ -1,0 +1,55 @@
+.jichuxinxi{
+    margin-left: 20px;
+    margin-top: 5px;
+    height: auto;
+    z-index: 200;
+    width: auto;
+}
+.all__content{
+	position:relative;
+}
+input{
+    margin: 2px 5px 2px 2px;
+}
+
+label{
+    margin: 2px 5px 2px  -7px;
+}
+
+span{
+    margin-left: 5px;
+}
+
+#ri_qi{
+    width: 180px;
+    margin-top: 15px;
+}
+
+#nian_ling{
+    width: 40px;
+}
+
+#shen_gao{
+    width: 40px;
+}
+
+#ti_zhong{
+    width: 40px;
+}
+
+#chu_sheng_di{
+    /* /*  */width: 760px; */
+}
+
+.sheng_zhang_fa_yu{
+    width: 40px;
+}
+#baocun{
+	border-radius:13px;
+	background-color: #82C053;
+	width:95px;
+	height:40px;
+	color:white;
+	border:hidden;
+	font-size:14px;
+}

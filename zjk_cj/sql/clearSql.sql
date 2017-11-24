@@ -1,0 +1,12 @@
+TRUNCATE TABLE admin;
+TRUNCATE TABLE app;
+TRUNCATE TABLE app_notice;
+TRUNCATE TABLE app_read;
+TRUNCATE TABLE enterprise;
+TRUNCATE TABLE notice;
+TRUNCATE TABLE noticeread;
+TRUNCATE TABLE page_notice;
+TRUNCATE TABLE page_read;
+TRUNCATE TABLE phone_send;
+TRUNCATE TABLE pre_time;
+TRUNCATE TABLE tax;

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<script language="javascript" type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="js/frame.js" language="javascript" type="text/javascript"></script>
+<link href="css/frame.css" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js" language="javascript" type="text/javascript"></script>
+<script>
+  DD_belatedPNG.fix('.nav ul li a,.top_link ul li,background');   /* string argument can be any CSS selector */
+</script>
+<![endif]-->
+</head>
+<body class="showmenu">
+<div class="pagemask"></div>
+<iframe class="iframemask"></iframe>
+<div class="head">
+<div class="top_logo"> <a href="login-index.php" target="main"><img src="images/main/logo.png" /></a> </div>
+     <div class="nav" id="nav">
+      <ul>
+      <li id="menu_0"><a class="thisclass" href="#" onClick="javascript:history.go(-1);" _for="left_menu_0"><b>返回</b></a></li>
+      </ul>
+    </div>
+	 <div class="top_link">
+      <ul>
+	    <li id="i_self">你好，管理员</li>
+		<li id="i_hide_menu"><a href="#" id="togglemenu">隐藏菜单</a></li>
+        <li id="i_exit"><a href="login-leave.jmy?role=0" target="_top">退出</a></li>		
+      </ul>
+    </div>
+</div>
+<!-- header end -->
+
+<div class="left">
+<div class="span"></div>
+<div class="menu" id="menu">
+		
+	<div id="items_left_menu_0">
+		<dl id="dl_items_1_0">
+			<dt>企业管理</dt>
+			<dd>
+				<ul>
+					<li><a href="enterprise-list.php?role=1" target="main">厂家管理</a></li>
+					<li><a href="enterprise-list.php?role=2" target="main">代理商管理</a></li>
+					<li><a href="enterprise-list.php?role=4" target="main">经销商管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="dl_items_2_0">
+			<dt>产品型号申请</dt>
+			<dd>
+			<ul>
+				<li><a href="version-adminapplying.php" target="main">型号申请</a></li>
+				<li><a href="version-adminapplied.php" target="main">型号管理</a></li>
+	         </ul>
+			</dd>
+		</dl>
+		<dl id="dl_items_3_0">
+			<dt>包装型号申请</dt>
+			<dd>
+			<ul>
+				<li><a href="versionp-adminapplying.php" target="main">型号申请</a></li>
+				<li><a href="versionp-adminapplied.php" target="main">型号管理</a></li>
+	         </ul>
+			</dd>
+		</dl>
+	
+</div>
+
+
+<!-- Item End -->
+
+
+</div>
+</div>
+<!-- left end -->
+
+<div class="right">
+	<div class="rightContent">
+	<iframe id="main" name="main" frameborder="0" scrolling="yes" src="login-index.php"></iframe>
+	</div>    
+</div>
+<!-- right end -->
+
+</body>
+</html>

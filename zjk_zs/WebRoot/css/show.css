@@ -1,0 +1,132 @@
+@charset "utf-8";
+*{
+	font-family:"Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+}
+html,body,div,span,p,pre,a,big,img,small,strong,li,ol,ul,form,label,table,tbody,tr,th,td {
+	padding: 0;
+	/* [disabled]border: 0; */
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	height: 100%;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body{
+	height: 100%;
+	font-size: 15px;
+	color :#000;
+	line-height:150%;
+}
+h1,h2,h3,h3,h4,h5,h6 {
+	margin: 0; padding:0;
+	}
+
+ol,ul {
+	list-style: none;
+}
+
+.header {
+	background:#257dbe; width:100%; height:auto;
+}
+.header .logo {
+	width:100%; height:auto;
+}
+
+
+
+
+.wrap_wap {
+	width:100%; margin: 0 auto; text-align:center;
+}
+
+
+.item_box {
+	width:91%; margin: 2em auto; text-align:center; border-bottom:#CCCCCC dotted 1px; padding-bottom:1rem;
+	}
+	
+.item_tit {
+	width:100%; margin: 0 auto; text-align:center; margin-bottom:2rem;
+	}
+.item_tita {
+	width:60%; margin: 0 auto; height:3rem; border-radius:3rem;
+}	
+.item_tita h2 {
+	width:0.3rem; margin: 0 auto; height:0.4rem; border-radius:3rem; border:#FFFFFF solid 1rem; float:left; display:inline; margin:0.3rem 0 0 0.3rem;
+}	
+.item_tita h3 {
+	 font-size:1.5rem; color:#FFFFFF; line-height:2.7rem;
+}
+
+.item_tita01 {
+	 background:#eb65a0;
+}	
+.item_tita02 {
+	 background:#ffa913;
+}	
+.item_tita03 {
+	 background:#257dbe;
+}	
+.item_tita04 {
+	 background:#7fc749;
+}	
+.item_tita05 {
+	 background:#de5959;
+}	
+.item_tita06 {
+	 background:#4ab9ca;
+}	
+
+
+.item_con {
+	width:100%; margin: 0 auto; text-align:center;
+	}	
+
+.item_con p {
+	width:100%; margin: 0.2em 0; text-align:left;
+	}
+
+.item_con p img {
+	max-width:100%; margin: 0 auto;
+}		
+
+
+
+.item_con {
+	width:100%; margin: 0 auto; text-align:center;
+	}	
+
+.item_con dl {
+	width:100%;
+	text-align:left;
+	padding: 0 0 0 0;
+	background-image: url(../images/line_dot.jpg);
+	background-repeat: repeat-y;
+	background-position: 4px top;
+	}
+
+.item_con dl dt {
+	text-align:left; margin: 0.9rem auto;
+	 background-image: url(../images/icon.png);
+	background-repeat:no-repeat;
+	background-position: left center;  font-size:1rem;
+	padding-left:1.5rem;
+	}	
+
+	
+.item_con dl dd {
+	 text-align:left; font-size:0.95rem; line-height:160%; color:#666666;
+	}	
+
+
+.in_but {
+	width:100%; border-radius:0.5rem; border:0px; line-height:3rem; background:#257dbe; color:#FFFFFF; font-size:1.2rem;
+	}
+
+.footer {
+	width:100%;  padding: 10px 0; border-top:#ccc solid 1px; text-align:center; font-size:14px; line-height:200%; background:#257dbe; color:#fff;
+}		

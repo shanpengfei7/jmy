@@ -1,0 +1,32 @@
+.bg__con{
+    width: 700px;
+    margin: 0 auto;
+    border: 1px solid #0000ff;
+    padding: 40px 0;
+}
+
+.bg_title{
+    margin: 0 auto;
+}
+
+h1{
+	text-align: center;
+}
+
+.bg_biao_ti{
+    background-color: #2fa8ec;
+}
+
+.bg_nei_rong{
+    background-color: #FFFFFF;
+}
+
+.bg_nei_rong img{
+    width: 580px;
+    height: 220px;
+    margin: 0 60px;
+}
+
+table tr{
+    height: 35px;
+}

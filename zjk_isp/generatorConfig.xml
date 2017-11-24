@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<classPathEntry  
+        location="C:\Users\pengfei\.m2\repository\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" /> 
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql:///interfaceserver" driverClass="com.mysql.jdbc.Driver" password="123" userId="root" />
+    <javaModelGenerator targetPackage="com.jmy.entity" targetProject="isp/src/main/java" />
+    <sqlMapGenerator targetPackage="com.jmy.mapping" targetProject="isp/src/main/java" />
+    <javaClientGenerator targetPackage="com.jmy.dao" targetProject="isp/src/main/java" type="XMLMAPPER" />
+    <table tableName="isp_actionclass" domainObjectName="Actionclass"></table>
+    <table tableName="isp_action" domainObjectName="Action"></table>
+    <table tableName="isp_actionlog" domainObjectName="Actionlog"></table>
+    <table tableName="isp_actionpackage" domainObjectName="Actionpackage"></table>
+    <table tableName="isp_admin" domainObjectName="Admin"></table>
+    <table tableName="isp_area" domainObjectName="Area"></table>
+    <table tableName="isp_coi_category_one" domainObjectName="Coi_category_one"></table>
+    <table tableName="isp_coi_category_two" domainObjectName="Coi_category_two"></table>
+    <table tableName="isp_coi_category_three" domainObjectName="Coi_category_three"></table>
+    <table tableName="isp_faceapplay" domainObjectName="Faceapplay"></table>
+    <table tableName="isp_faceext" domainObjectName="Faceext"></table>
+    <table tableName="isp_faceinfo" domainObjectName="Faceinfo"></table>
+    <table tableName="isp_good" domainObjectName="Good"></table>
+    <table tableName="isp_model" domainObjectName="Model"></table>
+    <table tableName="isp_modelapplay" domainObjectName="Modelapplay"></table>
+    <table tableName="isp_modelext" domainObjectName="Modelext"></table>
+    <table tableName="isp_notice" domainObjectName="Notice"></table>
+    <table tableName="isp_noticeread" domainObjectName="Noticeread"></table>
+    <table tableName="isp_platuser" domainObjectName="Platuser"></table>
+    <table tableName="isp_user" domainObjectName="User"></table>
+  </context>
+</generatorConfiguration>

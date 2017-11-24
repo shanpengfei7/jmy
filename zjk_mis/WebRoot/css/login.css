@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* height:630px; */
+    position:relative;
+    overflow: auto;
+    background: -ms-linear-gradient(top,#82C053,  #5D9C2A);        /* IE 10 */
+    background:-moz-linear-gradient(top,#82C053,   #5D9C2A);/*»ðºü*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#82C053), to(#5D9C2A));/*¹È¸è*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#82C053), to(#5D9C2A));      /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #82C053, #5D9C2A);   /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top,#82C053, #5D9C2A);  /*Opera 11.10+*/
+}
+/*.up{*/
+    /*width: 100%;*/
+    /*background-color: #82C053;*/
+    /*height: 52%;*/
+
+/*}*/
+/*.down{*/
+    /*width:100% ;*/
+    /*height:48%;*/
+    /*background-color: #5D9C2A;*/
+
+/*}*/
+.table{
+    margin-top: 130px;
+    margin-left:35%;
+    position:absolute;
+    border-color: #3F6D1F;
+}
+/*.td1{*/
+    /*width: 70px;*/
+    /*height: 240px;*/
+    /*background-color: #33670E;*/
+    /*text-align: center;*/
+    /*font-size: 25px;*/
+    /*border-bottom-left-radius: 30px;*/
+    /*border-top-left-radius: 30px;*/
+/*}*/
+.td2{
+    width: 280px;
+    height: 240px;
+    background-color: white;
+     border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.td3{
+    width: 120px;
+    height: 240px;
+    background-color: #33670E;
+    text-align: center;
+    font-size: 25px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.td4{
+    width: 470px;
+    text-align: center;
+    height: 80px;
+    border: hidden;
+}
+.td5{
+    background-color: white;
+    height: 25px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.td6{
+    background-color: white;
+    height: 25px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.login{
+    font-family: Aharoni;
+    color: white;
+}
+/*label{*/
+    /*margin-left: 7px;*/
+/*}*/
+.text{
+    width: 230px;
+    margin-left: 27px;
+    height: 35px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #E3E3E3;
+}
+.button{
+    background-color: #3F6D1F;
+    color: white;
+    width: 120px;
+    height: 50px;
+    margin-left: 120px;
+    border-radius:20px;
+    border-color:#3F6D1F ;
+    border: hidden;
+}
+.user{
+    margin-left: 7px;
+    z-index: 100;
+}
+h1{
+    color: white;
+    font-family: Aharoni;
+}

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC  
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<constant name="struts.action.extension" value="php,jmy"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="app" extends="json-default">
+		<action name="app-login" method="login" class="com.jinmayi.action.app.AppEmployeeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-info" method="info" class="com.jinmayi.action.app.AppEmployeeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-upinfo" method="upinfo" class="com.jinmayi.action.app.AppEmployeeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-pswd" method="pswd" class="com.jinmayi.action.app.AppEmployeeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-deliver" method="deliver" class="com.jinmayi.action.app.AppCirculateAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-receive" method="receive" class="com.jinmayi.action.app.AppCirculateAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-in" method="in" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-qrcode" method="qrcode" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-parent" method="parent" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-son" method="son" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-decode" method="decode" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-recode" method="recode" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-secode" method="secode" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-unqrcode" method="unqrcode" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-unpackage" method="unpackage" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-package" method="packaged" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-waybill" method="waybill" class="com.jinmayi.action.app.AppWaybillAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-sell" method="sell" class="com.jinmayi.action.app.AppQrCodeAction">
+			<result type="json"></result>
+		</action>
+		<action name="app-enterprise" method="enterprise" class="com.jinmayi.action.app.AppEnterpriseAction">
+			<result type="json"></result>
+		</action>
+		<!-- <action name="app-waybill" method="waybill" class="com.jinmayi.action.app.AppWaybillAction">
+			<result type="json"></result>
+		</action> -->
+	</package>
+	<package name="inter" extends="struts-default">
+		<interceptors>
+             <interceptor name="loginedCheck" class="com.jinmayi.util.LoginedCheckInterceptor" />
+             <interceptor-stack name="mystack">
+	              <interceptor-ref name="loginedCheck" />
+	              <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+         <global-results>
+            <result name="exception">/pages/login/login.jsp</result>
+            <result name="tologin">/pages/login/login.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="exception" />
+        </global-exception-mappings> 
+	</package>
+	<package name="jsp" extends="inter">
+		<default-interceptor-ref name="mystack" />
+		<action name="show" method="show" class="com.jinmayi.action.ShowAction">
+			<result>/pages/show/show.jsp</result>
+		</action>
+		<action name="shows" method="shows" class="com.jinmayi.action.ShowAction">
+			<result>/pages/show/show.jsp</result>
+		</action>
+		<action name="evaluate" method="evaluate" class="com.jinmayi.action.ShowAction">
+			<result type="chain">show.php</result>
+		</action>
+		<action name="evaluate" method="evaluate" class="com.jinmayi.action.ShowAction">
+			<result type="redirectAction" name="success">show.php?error=${error }&amp;token=${token }</result>
+		</action>
+		<action name="verCode" method="verCode" class="com.jinmayi.action.SubscriberAction"></action>
+		<action name="welcome" method="welcome" class="com.jinmayi.action.SubscriberAction">
+			<result name="agent">/pages/role/agent/index.jsp</result>
+			<result name="manu">/pages/role/manu/index.jsp</result>
+			<result name="retailer">/pages/role/retailer/index.jsp</result>
+			<result name="admin">/pages/role/admin/index.html</result>
+		</action>
+		<!-- 登陆 -->
+		<action name="login-*" method="{1}" class="com.jinmayi.action.SubscriberAction">
+			<result name="none">/pages/result/success.jsp</result><!-- 注册成功 -->
+			<result name="login">/pages/login/{1}.jsp</result>
+			<result name="success">/pages/role/frame.jsp</result>
+			
+			<result name="employee">/pages/role/employee/index.jsp</result>
+			<result name="employeelogin">/pages/login/employeelogin.jsp</result>
+			<!-- <result name="first">/pages/enterprise/add.jsp</result> -->
+			<result name="adminindex">/pages/role/adminindex.jsp</result>
+			<result name="index">/pages/role/index.jsp</result>
+			<result name="adminok">/pages/role/admin/index.html</result>
+			<result name="admin">/pages/login/adminlogin.jsp</result>
+			<result name="input">/pages/login/login.jsp</result><!-- 注册失败 -->
+		</action>
+		<!-- 企业 -->
+		<action name="enterprise-*" method="{1}" class="com.jinmayi.action.EnterpriseAction">
+			<result name="none">/pages/result/success.jsp</result>
+			<result name="success">/pages/enterprise/{1}.jsp</result>
+			<result name="input">/pages/enterprise/{1}.jsp</result>
+			
+			<result name="add">/pages/enterprise/add.jsp</result>
+			<result name="edit">/pages/enterprise/edit.jsp</result>
+			<!-- <result name="wait">/pages/result/wait.jsp</result> -->
+		</action>
+		<!-- 员工 -->
+		<action name="employee-*" method="{1}" class="com.jinmayi.action.EmployeeAction">
+			<result name="none">/pages/result/success.jsp</result>
+			<result name="input">/pages/employee/{1}.jsp</result>
+			<result name="success">/pages/employee/{1}.jsp</result>
+			
+			<result name="edit">/pages/employee/edit.jsp</result>
+		</action>
+		<!-- 产品下线 -->
+		<action name="product-*" method="{1}" class="com.jinmayi.action.ProductAction">
+			<result name="success">/pages/product/{1}.jsp</result>
+			<result name="none">/pages/result/success.jsp</result>
+			
+			<result name="add">/pages/product/add.jsp</result>
+		</action>
+		<!-- 生产产品二维码 -->
+		<action name="qrcode-*" method="{1}" class="com.jinmayi.action.QrCodeAction">
+			<result>/pages/qrcode/{1}.jsp</result>
+			<result name="none">/pages/result/success.jsp</result>
+			<result name="add">/pages/qrcode/add.jsp</result>
+		</action>
+		<action name="qrcode-txt" method="txt" class="com.jinmayi.action.QrCodeAction">
+			<result name="success" type="stream">
+				<!-- <param name="contentType">application/txt;</param>
+				<param name="inputName">downloadFile</param>
+				<param name="bufferSize">2048</param> -->
+           	</result>
+		</action>
+		<action name="qrcode-zip" method="zip" class="com.jinmayi.action.QrCodeAction">
+			<result name="success" type="stream">
+				<!-- <param name="contentType">application/txt;</param>
+				<param name="inputName">downloadFile</param>
+				<param name="bufferSize">2048</param> -->
+           	</result>
+		</action>
+		<!-- 产品型号 -->
+		<action name="version-*" method="{1}" class="com.jinmayi.action.VersionAction">
+			<result name="none">/pages/result/success.jsp</result>
+			<result name="success">/pages/version/{1}.jsp</result>
+			
+			<result name="add">/pages/version/add.jsp</result>
+			<result name="edit">/pages/version/edit.jsp</result>
+			<result name="padd">/pages/version/padd.jsp</result>
+			<result name="pedit">/pages/version/pedit.jsp</result>
+		</action>
+		<!-- 包装型号 -->
+		<action name="versionp-*" method="{1}" class="com.jinmayi.action.VersionpAction">
+			<result name="none">/pages/result/success.jsp</result>
+			<result name="success">/pages/versionp/{1}.jsp</result>
+			
+			<result name="add">/pages/versionp/add.jsp</result>
+			<result name="edit">/pages/versionp/edit.jsp</result>
+			<result name="padd">/pages/versionp/padd.jsp</result>
+			<result name="pedit">/pages/versionp/pedit.jsp</result>
+		</action>
+		<!-- 物流信息 -->
+		<action name="circulate-*" method="{1}" class="com.jinmayi.action.CirculateAction">
+			<result name="none">/pages/result/success.jsp</result>
+			<result name="success">/pages/circulate/{1}.jsp</result>
+		</action>
+		<!-- 运单信息，发货收货信息 -->
+		<action name="waybill-*" method="{1}" class="com.jinmayi.action.WayBillAction">
+			<result name="none">/pages/result/success.jsp</result>
+			<result name="success">/pages/waybill/{1}.jsp</result>
+		</action>
+		<!-- 库存信息 -->
+		<action name="repertory-*" method="{1}" class="com.jinmayi.action.RepertoryAction">
+			<result name="success">/pages/repertory/{1}.jsp</result>
+		</action>
+		<!-- app -->
+		<action name="appinfo-*" method="{1}" class="com.jinmayi.action.app.AppInformation">
+			<result >/pages/app/{1}.jsp</result>
+		</action>
+		
+		<action name="app-waybills" method="waybills" class="com.jinmayi.action.app.AppWaybillAction">
+			<result>/pages/app/waybill.jsp</result>
+		</action>
+	</package>
+</struts>   
